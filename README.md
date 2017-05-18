@@ -1,6 +1,6 @@
 # RubenRomaoSecurity
 
-This Module is intended to be a test with the aim to understand the custom module that uses all the resources of a Adminhtml Custom Module.
+This Module is intended to be a test with the aim to understand the custom module that uses all the resources for an Adminhtml Custom Module.
 
 What the module does:
 
