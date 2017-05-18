@@ -1,0 +1,376 @@
+2017-04-29T01:07:13+00:00 ERR (3): Notice: Undefined index: username  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 11
+2017-04-29T01:15:34+00:00 ERR (3): Notice: Use of undefined constant sales_flat_order_item - assumed 'sales_flat_order_item'  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 112
+2017-04-29T01:25:44+00:00 ERR (3): Notice: Undefined offset: 0  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 122
+2017-04-29T04:58:43+00:00 ERR (3): Notice: Use of undefined constant admin_user_login_attempt - assumed 'admin_user_login_attempt'  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 117
+2017-04-29T04:59:19+00:00 ERR (3): Notice: Use of undefined constant admin_user_login_attempt - assumed 'admin_user_login_attempt'  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 117
+2017-04-29T05:00:23+00:00 ERR (3): Notice: Use of undefined constant admin_user_login_attempt - assumed 'admin_user_login_attempt'  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 127
+2017-04-29T05:31:19+00:00 ERR (3): Notice: Use of undefined constant admin_user_login_attempt - assumed 'admin_user_login_attempt'  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 128
+2017-04-29T05:31:19+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.`user_id` FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` AS `user_id` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`user_id` = '8') AND (`locked_until` > '2017-04-29 05:31:19') AND (`locked_until` IS NOT NULL)
+2017-04-29T05:42:05+00:00 ERR (3): Notice: Use of undefined constant admin_user_login_attempt - assumed 'admin_user_login_attempt'  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 128
+2017-04-29T05:42:05+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.`user_id` FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`user_id` = '8') AND (`locked_until` > '2017-04-29 05:42:05') AND (`locked_until` IS NOT NULL)
+2017-04-29T05:46:20+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`user_id` = '8') AND (`locked_until` > '2017-04-29 05:46:20') AND (`locked_until` IS NOT NULL)
+2017-04-29T05:48:11+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` > '2017-04-29 05:48:11') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:13:48+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` > '2017-04-29 06:13:48') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:25:20+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 06:25:20') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:29:48+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 06:29:48') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:30:43+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 06:30:43') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:31:49+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 06:31:49') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:33:31+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` > '2017-04-29 06:33:31') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:34:03+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` > '2017-04-29 06:34:03') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:35:13+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 06:35:13') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:50:39+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` > '2017-04-29 06:50:39') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:51:48+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` > '2017-04-29 06:51:48') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:53:59+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 06:53:59') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:54:48+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 06:54:48') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:55:35+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 06:55:35') AND (`locked_until` IS NOT NULL)
+2017-04-29T06:56:06+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 06:56:06') AND (`locked_until` IS NOT NULL)
+2017-04-29T07:07:47+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 07:07:47') AND (`locked_until` IS NOT NULL)
+2017-04-29T07:09:49+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 07:09:49') AND (`locked_until` IS NOT NULL)
+2017-04-29T07:10:43+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 07:10:43') AND (`locked_until` IS NOT NULL)
+2017-04-29T08:18:08+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 08:18:08') AND (`locked_until` IS NOT NULL) AND (`login_attempt_id` = '3')
+2017-04-29T08:26:12+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`locked_until` < '2017-04-29 08:26:12') AND (`locked_until` IS NOT NULL) AND (`authentication_status` = '1')
+2017-04-29T08:58:59+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 38
+2017-04-29T08:58:59+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 38
+2017-04-29T08:59:05+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 38
+2017-04-29T08:59:05+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 38
+2017-04-29T09:00:18+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 38
+2017-04-29T09:00:18+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 38
+2017-04-29T09:07:07+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 37
+2017-04-29T09:07:07+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 37
+2017-04-29T09:08:11+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 37
+2017-04-29T09:08:11+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 37
+2017-04-29T09:14:53+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 53
+2017-04-29T09:14:53+00:00 ERR (3): Recoverable Error: Object of class Mage_Admin_Model_User could not be converted to string  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 53
+2017-04-29T09:28:47+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') ORDER BY login_attempt DESC LIMIT 3
+2017-04-29T09:29:23+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') ORDER BY login_attempt DESC LIMIT 3
+2017-04-29T09:31:33+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') ORDER BY login_attempt DESC LIMIT 3
+2017-04-29T09:36:15+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') ORDER BY login_attempt DESC LIMIT 3
+2017-04-29T09:36:21+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') ORDER BY login_attempt DESC LIMIT 3
+2017-04-29T09:36:49+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') ORDER BY login_attempt DESC LIMIT 3
+2017-04-29T09:50:33+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') ORDER BY login_attempt DESC LIMIT 3
+2017-04-29T10:03:20+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-04-29 10:03:20') AND (`locked_until` IS NOT NULL) AND (`authentication_status` = '1')
+2017-04-29T10:26:51+00:00 ERR (3): Notice: Undefined offset: 0  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 15
+2017-04-29T10:26:51+00:00 ERR (3): Notice: Undefined offset: 0  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 21
+2017-04-30T20:33:48+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 25
+2017-04-30T22:22:43+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`username`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao')
+2017-04-30T22:31:44+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`username`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') LIMIT 3
+2017-04-30T22:34:30+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`username`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') LIMIT 3
+2017-04-30T22:36:27+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') LIMIT 3
+2017-04-30T22:42:29+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`user_id` = 'user_id') LIMIT 3
+2017-04-30T22:48:24+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (((`login_attempt` = '2017-04-30 22:48:24'))) LIMIT 3
+2017-04-30T23:06:33+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (((`login_attempt` = '1493597193'))) LIMIT 3
+2017-04-30T23:08:30+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` <= '1493593710') LIMIT 3
+2017-04-30T23:25:06+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= 1493594646) AND (`login_attempt` <= '2017-04-30 23:25:06') LIMIT 3
+2017-04-30T23:29:21+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= -60) AND (`login_attempt` <= 1493594961) LIMIT 3
+2017-04-30T23:38:37+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-04-30 23:37:37') AND (`login_attempt` <= '2017-04-30 23:38:37') LIMIT 3
+2017-05-01T00:37:11+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:36:11') AND (`login_attempt` <= '2017-05-01 00:37:11') LIMIT 3
+2017-05-01T00:38:01+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:37:01') AND (`login_attempt` <= '2017-05-01 00:38:01') LIMIT 3
+2017-05-01T00:38:28+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:37:28') AND (`login_attempt` <= '2017-05-01 00:38:28') LIMIT 3
+2017-05-01T00:38:28+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 48
+2017-05-01T00:39:24+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:38:24') AND (`login_attempt` <= '2017-05-01 00:39:24') LIMIT 3
+2017-05-01T00:40:10+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:39:10') AND (`login_attempt` <= '2017-05-01 00:40:10') LIMIT 3
+2017-05-01T00:40:10+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 81
+2017-05-01T00:40:10+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 87
+2017-05-01T00:40:10+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 89
+2017-05-01T00:42:50+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:41:50') AND (`login_attempt` <= '2017-05-01 00:42:50') LIMIT 3
+2017-05-01T00:42:50+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 75
+2017-05-01T00:44:36+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:43:36') AND (`login_attempt` <= '2017-05-01 00:44:36') LIMIT 3
+2017-05-01T00:45:25+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:44:25') AND (`login_attempt` <= '2017-05-01 00:45:25') LIMIT 3
+2017-05-01T00:45:25+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 75
+2017-05-01T00:47:52+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:46:52') AND (`login_attempt` <= '2017-05-01 00:47:52') LIMIT 3
+2017-05-01T00:50:04+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 00:49:04') AND (`login_attempt` <= '2017-05-01 00:50:04') LIMIT 3
+2017-05-01T00:50:04+00:00 ERR (3): Notice: Undefined offset: 0  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 75
+2017-05-01T00:52:54+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T00:52:54+00:00 ERR (3): Notice: Undefined offset: 0  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 75
+2017-05-01T00:57:24+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 45
+2017-05-01T01:00:14+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 45
+2017-05-01T01:03:22+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 45
+2017-05-01T01:12:33+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T01:19:39+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T01:22:21+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T01:22:43+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T01:22:43+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 59
+2017-05-01T01:26:03+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T01:26:03+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 59
+2017-05-01T01:26:35+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T01:26:35+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 60
+2017-05-01T01:27:04+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T01:27:44+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T01:27:44+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 60
+2017-05-01T01:34:31+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 46
+2017-05-01T01:36:28+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON main_table.user_id = admin_user.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 01:35:28') AND (`login_attempt` <= '2017-05-01 01:36:28') LIMIT 3
+2017-05-01T01:36:28+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 61
+2017-05-01T01:38:15+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON main_table.user_id = admin_user.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 01:37:15') AND (`login_attempt` <= '2017-05-01 01:38:15') LIMIT 3
+2017-05-01T01:38:15+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 61
+2017-05-01T01:38:24+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON main_table.user_id = admin_user.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 01:37:24') AND (`login_attempt` <= '2017-05-01 01:38:24') LIMIT 3
+2017-05-01T01:38:24+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 61
+2017-05-01T01:40:45+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON main_table.user_id = admin_user.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 01:39:45') AND (`login_attempt` <= '2017-05-01 01:40:45') LIMIT 3
+2017-05-01T01:40:45+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 57
+2017-05-01T01:41:55+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON main_table.user_id = admin_user.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 01:40:55') AND (`login_attempt` <= '2017-05-01 01:41:55') LIMIT 3
+2017-05-01T01:42:43+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `main_table`.`locked_until`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON main_table.user_id = admin_user.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 01:41:43') AND (`login_attempt` <= '2017-05-01 01:42:43') LIMIT 3
+2017-05-01T01:45:45+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON main_table.user_id = admin_user.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 01:44:45') AND (`login_attempt` <= '2017-05-01 01:45:45') LIMIT 3
+2017-05-01T01:47:15+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON main_table.user_id = admin_user.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 01:46:15') AND (`login_attempt` <= '2017-05-01 01:47:15') LIMIT 3
+2017-05-01T02:25:19+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 02:24:19') AND (`login_attempt` <= '2017-05-01 02:25:19') LIMIT 3
+2017-05-01T02:26:14+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-01 02:25:14') AND (`login_attempt` <= '2017-05-01 02:26:14') LIMIT 3
+2017-05-01T02:26:14+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 64
+2017-05-01T02:26:14+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 70
+2017-05-01T02:26:14+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 72
+2017-05-01T03:03:19+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:05:16+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:10:11+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:13:05+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:13:34+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:13:47+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:18:39+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:19:10+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:22:26+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:24:11+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:28:02+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:29:47+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:31:20+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:35:18+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:36:35+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:39:53+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:40:49+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:43:22+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:56:45+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:58:06+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:58:06+00:00 DEBUG (7): 
+2017-05-01T03:58:49+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:58:49+00:00 DEBUG (7): 
+2017-05-01T03:59:21+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T03:59:21+00:00 DEBUG (7): 
+2017-05-01T04:03:03+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T04:03:03+00:00 DEBUG (7): 
+2017-05-01T04:03:31+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T04:03:31+00:00 DEBUG (7): 
+2017-05-01T04:06:57+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T04:06:57+00:00 DEBUG (7): 
+2017-05-01T04:07:16+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T04:07:16+00:00 DEBUG (7): 
+2017-05-01T04:07:51+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao') LIMIT 3
+2017-05-01T04:07:51+00:00 DEBUG (7): 
+2017-05-02T13:50:57+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao')
+2017-05-02T13:50:57+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 69
+2017-05-02T13:52:29+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 13:51:29') AND (`login_attempt` <= '2017-05-02 13:52:29') LIMIT 3
+2017-05-02T13:52:29+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 69
+2017-05-02T13:55:53+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`user_id` = '8') AND (`login_attempt` >= '2017-05-02 13:54:53') AND (`login_attempt` <= '2017-05-02 13:55:53') LIMIT 3
+2017-05-02T13:56:36+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-02 13:55:36') AND (`login_attempt` <= '2017-05-02 13:56:36') LIMIT 3
+2017-05-02T13:56:36+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 70
+2017-05-02T14:00:03+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`login_attempt` >= '2017-05-02 13:59:03') AND (`login_attempt` <= '2017-05-02 14:00:03') LIMIT 3
+2017-05-02T14:00:03+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 70
+2017-05-02T14:01:06+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:00:06') AND (`login_attempt` <= '2017-05-02 14:01:06') LIMIT 3
+2017-05-02T14:01:06+00:00 ERR (3): Notice: Undefined index: user_id  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 70
+2017-05-02T14:03:02+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:02:02') AND (`login_attempt` <= '2017-05-02 14:03:02') LIMIT 3
+2017-05-02T14:10:25+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:09:25') AND (`login_attempt` <= '2017-05-02 14:10:25') LIMIT 3
+2017-05-02T14:13:02+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:12:02') AND (`login_attempt` <= '2017-05-02 14:13:02') LIMIT 3
+2017-05-02T14:13:02+00:00 DEBUG (7): 
+2017-05-02T14:14:19+00:00 DEBUG (7): 
+2017-05-02T14:27:57+00:00 ERR (3): Notice: Array to string conversion  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 108
+2017-05-02T14:27:57+00:00 DEBUG (7): Array
+2017-05-02T14:38:22+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:37:22') AND (`login_attempt` <= '2017-05-02 14:38:22') LIMIT 3
+2017-05-02T14:42:37+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:41:37') AND (`login_attempt` <= '2017-05-02 14:42:37') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T14:51:53+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:50:53') AND (`login_attempt` <= '2017-05-02 14:51:53') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T14:51:57+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-05-02 14:51:57') AND (`locked_until` IS NOT NULL)
+2017-05-02T14:54:34+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:53:34') AND (`login_attempt` <= '2017-05-02 14:54:34') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T14:54:42+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:53:42') AND (`login_attempt` <= '2017-05-02 14:54:42') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T14:54:49+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:53:49') AND (`login_attempt` <= '2017-05-02 14:54:49') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T14:54:56+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:53:56') AND (`login_attempt` <= '2017-05-02 14:54:56') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T14:58:11+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:57:11') AND (`login_attempt` <= '2017-05-02 14:58:11') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T14:59:56+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:58:56') AND (`login_attempt` <= '2017-05-02 14:59:56') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:00:10+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:59:10') AND (`login_attempt` <= '2017-05-02 15:00:10') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:00:18+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 14:59:18') AND (`login_attempt` <= '2017-05-02 15:00:18') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:02:19+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:01:19') AND (`login_attempt` <= '2017-05-02 15:02:19') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:02:25+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:01:25') AND (`login_attempt` <= '2017-05-02 15:02:25') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:02:34+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:01:34') AND (`login_attempt` <= '2017-05-02 15:02:34') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:05:27+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:04:27') AND (`login_attempt` <= '2017-05-02 15:05:27') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:05:27+00:00 ERR (3): Notice: Undefined property: Security_Model_Resource_LoginAttempts_Collection::$getSize  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 71
+2017-05-02T15:05:34+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:04:34') AND (`login_attempt` <= '2017-05-02 15:05:34') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:05:34+00:00 ERR (3): Notice: Undefined property: Security_Model_Resource_LoginAttempts_Collection::$getSize  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 71
+2017-05-02T15:05:40+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:04:40') AND (`login_attempt` <= '2017-05-02 15:05:40') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:05:40+00:00 ERR (3): Notice: Undefined property: Security_Model_Resource_LoginAttempts_Collection::$getSize  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/local/ExpoCart/Security/Model/Observer.php on line 71
+2017-05-02T15:09:15+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:08:15') AND (`login_attempt` <= '2017-05-02 15:09:15') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:09:20+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:08:20') AND (`login_attempt` <= '2017-05-02 15:09:20') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:09:28+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:08:28') AND (`login_attempt` <= '2017-05-02 15:09:28') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:27:03+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-02 15:26:03') AND (`login_attempt` <= '2017-05-02 15:27:03') ORDER BY login_attempt DESC LIMIT 3
+2017-05-02T15:45:03+00:00 ERR (3): Warning: hash_equals(): Expected user_string to be a string, null given  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/core/Mage/Core/Model/Encryption.php on line 101
+2017-05-02T19:32:49+00:00 ERR (3): Warning: hash_equals(): Expected user_string to be a string, null given  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/core/Mage/Core/Model/Encryption.php on line 101
+2017-05-02T19:34:34+00:00 ERR (3): Warning: hash_equals(): Expected user_string to be a string, null given  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/core/Mage/Core/Model/Encryption.php on line 101
+2017-05-02T19:52:35+00:00 ERR (3): Warning: hash_equals(): Expected user_string to be a string, null given  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/core/Mage/Core/Model/Encryption.php on line 101
+2017-05-02T19:52:57+00:00 ERR (3): Warning: hash_equals(): Expected user_string to be a string, null given  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/core/Mage/Core/Model/Encryption.php on line 101
+2017-05-02T19:53:10+00:00 ERR (3): Warning: hash_equals(): Expected user_string to be a string, null given  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/core/Mage/Core/Model/Encryption.php on line 101
+2017-05-03T09:30:26+00:00 ERR (3): Warning: hash_equals(): Expected user_string to be a string, null given  in /usr/local/zend/apache2/htdocs/magetest.dev/app/code/core/Mage/Core/Model/Encryption.php on line 101
+2017-05-03T10:21:16+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`locked_until` FROM `admin_user` AS `main_table` WHERE (`username` = 'rubenromao2')
+2017-05-03T10:23:47+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id
+2017-05-03T10:25:07+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id
+2017-05-03T10:47:43+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id
+2017-05-03T10:57:32+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id
+2017-05-03T11:05:41+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id
+2017-05-03T11:29:52+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id
+2017-05-03T11:31:21+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-05-03 11:31:21') AND (`locked_until` IS NOT NULL)
+2017-05-03T12:42:08+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id
+2017-05-03T12:54:32+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id
+2017-05-03T13:56:45+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-05-03 13:56:45') AND (`locked_until` IS NOT NULL)
+2017-05-03T13:58:27+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`locked_until` < '2017-05-03 13:58:27') AND (`locked_until` IS NOT NULL)
+2017-05-03T14:04:20+00:00 DEBUG (7): 
+2017-05-03T20:27:48+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 20:26:48') AND (`login_attempt` <= '2017-05-03 20:27:48') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T20:31:29+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 20:30:29') AND (`login_attempt` <= '2017-05-03 20:31:29') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T20:35:08+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 20:34:08') AND (`login_attempt` <= '2017-05-03 20:35:08') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T20:40:40+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 20:39:40') AND (`login_attempt` <= '2017-05-03 20:40:40') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T20:47:06+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 20:46:05') AND (`login_attempt` <= '2017-05-03 20:47:05') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T20:58:02+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 20:57:02') AND (`login_attempt` <= '2017-05-03 20:58:02') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T21:24:27+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 21:23:27') AND (`login_attempt` <= '2017-05-03 21:24:27') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T21:26:39+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 21:25:39') AND (`login_attempt` <= '2017-05-03 21:26:39') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T21:28:10+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 21:27:10') AND (`login_attempt` <= '2017-05-03 21:28:10') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T21:37:13+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 21:36:13') AND (`login_attempt` <= '2017-05-03 21:37:13') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T21:38:07+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 21:37:07') AND (`login_attempt` <= '2017-05-03 21:38:07') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T21:38:43+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 21:37:43') AND (`login_attempt` <= '2017-05-03 21:38:43') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T22:08:45+00:00 DEBUG (7): SELECT `main_table`.`login_attempt_id`, `main_table`.`user_id`, `main_table`.`login_attempt`, `main_table`.`authentication_status`, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`login_attempt` >= '2017-05-03 22:07:45') AND (`login_attempt` <= '2017-05-03 22:08:45') ORDER BY login_attempt DESC LIMIT 3
+2017-05-03T22:10:21+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id
+2017-05-03T22:21:24+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`user_id` = '17')
+2017-05-03T22:51:31+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id
+2017-05-03T22:54:30+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`user_id` = '17')
+2017-05-03T22:55:53+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id
+2017-05-03T22:58:25+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id
+2017-05-03T23:00:01+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`user_id` = '17')
+2017-05-03T23:01:15+00:00 DEBUG (7): SELECT `main_table`.*, `admin_user`.* FROM `admin_user_login_attempt` AS `main_table`
+ INNER JOIN `admin_user` ON admin_user.user_id = main_table.user_id WHERE (`user_id` = '17')
+2017-05-03T23:07:24+00:00 DEBUG (7): SELECT `main_table`.* FROM `admin_user_login_attempt` AS `main_table` WHERE (`user_id` = '17')
+2017-05-04T00:11:37+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`authentication_status`, `main_table`.`is_active`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`is_active` = 0) AND (`locked_until` IS NOT NULL) AND (`locked_until` < '2017-05-04 00:11:37') AND (`authentication_status` = '0')
+2017-05-04T00:41:04+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`is_active`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao3') AND (`is_active` = 0) AND (`locked_until` IS NOT NULL) AND (`locked_until` < '2017-05-04 00:41:04') AND (`authentication_status` = '0')
+2017-05-04T00:50:46+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`is_active`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`username` = 'rubenromao') AND (`is_active` = 0) AND (`locked_until` IS NOT NULL) AND (`locked_until` < '2017-05-04 00:50:46') AND (`authentication_status` = '0')
+2017-05-04T02:22:37+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`is_active`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`is_active` = 1) AND ((`locked_until` = ''))
+2017-05-04T02:34:07+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`is_active`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`is_active` = 1) AND ((`locked_until` IS NULL) OR (`locked_until` < '2017-05-04 02:34:07'))
+2017-05-04T02:35:28+00:00 DEBUG (7): SELECT `main_table`.`user_id`, `main_table`.`is_active`, `main_table`.`locked_until`, `admin_user_login_attempt`.* FROM `admin_user` AS `main_table`
+ INNER JOIN `admin_user_login_attempt` ON admin_user_login_attempt.user_id = main_table.user_id WHERE (`is_active` = 1) AND ((`locked_until` IS NULL) OR (`locked_until` < '2017-05-04 02:35:28'))

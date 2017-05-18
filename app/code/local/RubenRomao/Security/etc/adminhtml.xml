@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *  @author     Ruben Romao ruben@rubenromao.com
+ *
+ *  @category   RubenRomao
+ *  @package    RubenRomao_Security
+ *
+ *  @copyright  Copyright (c) 2017, Ruben Romao.
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <rubenromao_security_config translate="title" module="rubenromao_security">
+                                        <title>Login attempts configuration</title>
+                                    </rubenromao_security_config>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <RubenRomao_Security>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Admin/>
+                <Mage_Adminhtml/>
+                <Mage_Core/>
+            </depends>
+        </RubenRomao_Security>
+    </modules>
+</config>

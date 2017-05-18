@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *  @author     Ruben Romao ruben@rubenromao.com
+ *
+ *  @category   RubenRomao
+ *  @package    RubenRomao_Security
+ *
+ *  @copyright  Copyright (c) 2017, Ruben Romao.
+ */
+-->
+<config>
+    <modules>
+        <RubenRomao_Security>
+            <version>0.1.0</version>
+        </RubenRomao_Security>
+    </modules>
+    <global>
+        <models>
+            <rubenromao_security>
+                <class>RubenRomao_Security_Model</class>
+                <resourceModel>rubenromao_security_resource</resourceModel>
+            </rubenromao_security>
+            <rubenromao_security_resource>
+                <class>RubenRomao_Security_Model_Resource</class>
+                <entities>
+                    <admin_user_login_attempt>
+                        <table>admin_user_login_attempt</table>
+                    </admin_user_login_attempt>
+                </entities>
+            </rubenromao_security_resource>
+        </models>
+        <blocks>
+            <rubenromao_security>
+                <class>RubenRomao_Security_Block</class>
+            </rubenromao_security>
+        </blocks>
+        <helpers>
+            <rubenromao_security>
+                <class>RubenRomao_Security_Helper</class>
+            </rubenromao_security>
+        </helpers>
+        <resources>
+            <rubenromao_security_setup>
+                <setup>
+                    <module>RubenRomao_Security</module>
+                </setup>
+            </rubenromao_security_setup>
+        </resources>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <RubenRomao_Security before="Mage_Adminhtml">RubenRomao_Security_Adminhtml</RubenRomao_Security>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <events>
+            <admin_user_authenticate_before>
+                <observers>
+                    <rubenromao_security_admin_user_authenticate_before>
+                        <type>singleton</type>
+                        <class>rubenromao_security/observer</class>
+                        <method>adminUserAuthenticateBefore</method>
+                    </rubenromao_security_admin_user_authenticate_before>
+                </observers>
+            </admin_user_authenticate_before>
+            <admin_session_user_login_failed>
+                <observers>
+                    <rubenromao_security_admin_session_user_login_failed>
+                        <type>singleton</type>
+                        <class>rubenromao_security/observer</class>
+                        <method>adminSessionUserLoginFailed</method>
+                    </rubenromao_security_admin_session_user_login_failed>
+                </observers>
+            </admin_session_user_login_failed>
+        </events>
+        <layout>
+            <updates>
+                <security>
+                    <file>rubenromao/security.xml</file>
+                </security>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

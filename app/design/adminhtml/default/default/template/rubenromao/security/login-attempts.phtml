@@ -1,0 +1,78 @@
+<div id="security_info_tabs_security_edit_tab_loginattemps_content">
+    <div class="entry-edit">
+        <div class="entry-edit-head">
+            <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->getTabTitle(); ?></h4>
+        </div>
+        <div id="group_fields4" class="fieldset fieldset-wide">
+            <div class="hor-scroll">
+                <div class="grid" id="order-items_grid">
+                    <table cellspacing="0" class="data order-tables">
+                        <col />
+                        <col width="100" />
+                        <col width="100" />
+                        <col width="100"  />
+                        <col width="100" />
+                        <col width="100"  />
+                        <col width="100" />
+                        <col width="100" />
+                        <thead>
+                            <tr class="headings">
+                                <th class="no-link" colspan="2"><?php echo $this->__('ID') ?></th>
+                                <th class="no-link"><?php echo $this->__('Username') ?></th>
+                                <th class="no-link"><?php echo $this->__('First Name') ?></th>
+                                <th class="no-link"><?php echo $this->__('Last Name') ?></th>
+                                <th class="no-link"><?php echo $this->__('Is Active') ?></th>
+                                <th class="no-link"><?php echo $this->__('Locked Until') ?></th>
+                                <th class="no-link last"><?php echo $this->__('Time of Login Attempt') ?></th>
+                            </tr>
+                        </thead>
+
+
+                        <?php $i=0 ?>
+                        <?php //foreach ($_items as $_item):$i++ ?>
+                        <!--tbody class="<?php //echo ($i%2)?'even':'odd' ?>"-->
+                        <tr>
+                            <td class="first"></td>
+                            <td class="first"></td>
+                            <td class="first"></td>
+                            <td class="first"></td>
+                            <td class="first"></td>
+                            <td class="first"></td>
+                            <td class="first"></td>
+                            <td class="first"></td>
+                        </tr>
+
+
+                    <table class="form-list" cellspacing="0">
+                    <tbody>
+                    <?php $attempts = $this->getAdminLoginAttempts();?>
+                    <?php $i = 0; ?>
+                    <?php foreach ($attempts as $key => $data): ?>
+                    <?php
+                        if ($data == 'user_id') {
+                            continue;
+                        }
+                    ?>
+                    <tr>
+                        <?php foreach ($data as $index => $val): ?>
+
+                        <td>
+                            <?php if ($val == '1'): ?>
+                               <?php echo 'Yes'; ?>
+                            <?php elseif ($val == '0'): ?>
+                                <?php echo 'No'; ?>
+                            <?php else: ?>
+                                <?php echo $val; ?>
+                            <?php endif; ?>
+                        </td>
+                        <?php endforeach; ?>
+                    </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>
