@@ -187,7 +187,7 @@ class RubenRomao_Security_Model_Observer
 
             } else {
 
-                $this->adminSessionUserLoginFailed($observer);
+                //$this->adminSessionUserLoginFailed($observer);
 
             }
         }
