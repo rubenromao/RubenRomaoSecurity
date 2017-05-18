@@ -1,0 +1,46 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Magento template
+#--------------------------#
+# Magento Default Files    #
+#--------------------------#
+
+/app/etc/local.xml
+/media/*
+!/media/.htaccess
+!/media/customer/.htaccess
+!/media/dhl/logo.jpg
+!/media/downloadable/.htaccess
+!/media/xmlconnect/custom/ok.gif
+!/media/xmlconnect/original/ok.gif
+!/media/xmlconnect/system/ok.gif
+/var/*
+!/var/.htaccess
+!/var/package/*.xml
+
+.gitignore
+.htaccess.sample
+.idea/codeStyleSettings.xml
+.idea/magetest.dev.iml
+.idea/magicento.xml
+.idea/magicento/
+.idea/misc.xml
+.idea/modules.xml
+.idea/php.xml
+.idea/workspace.xml
+LICENSE.html
+LICENSE.txt
+RELEASE_NOTES.txt
+index.php.sample
+media/captcha/
+media/css/
+media/css_secure/
+media/custom_options/order/
+media/import/
+media/js/
+media/tmp/catalog/product/m/
+media/tmp/catalog/product/s/
+media/tmp/wrapping/
+php.ini.sample
+var/cache/
+var/log/
+var/session/
