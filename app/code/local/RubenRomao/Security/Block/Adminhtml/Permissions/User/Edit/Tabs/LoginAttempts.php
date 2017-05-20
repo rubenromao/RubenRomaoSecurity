@@ -32,11 +32,11 @@ class RubenRomao_Security_Block_Adminhtml_Permissions_User_Edit_Tabs_LoginAttemp
          */
         $attempts = Mage::getSingleton('admin/user')->getCollection()
             ->addFieldToSelect(array(
-                'username', 'firstname', 'lastname', 'is_active', 'locked_until'
-            ))
+                    'username', 'firstname', 'lastname', 'is_active', 'locked_until'
+                ))
             ->addFieldToFilter('main_table.user_id', array(
-                'eq' => Mage::getSingleton('admin/session')->getUser()->getUserId()
-            ))
+                    'eq' => Mage::getSingleton('admin/session')->getUser()->getUserId()
+                ))
             ->setOrder('login_attempt', 'DESC');
 
         $attempts->getSelect()->join(array(
@@ -72,7 +72,7 @@ class RubenRomao_Security_Block_Adminhtml_Permissions_User_Edit_Tabs_LoginAttemp
      */
     public function getTabTitle()
     {
-        return $this->__('Login Attempts (Last 30 Attempts)');
+        return $this->__('Last 30 Login Attempts');
     }
 
     /**

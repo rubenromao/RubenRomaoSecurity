@@ -9,186 +9,224 @@
  */
 class RubenRomao_Security_Model_Observer
 {
-    const ONEMINUTE = 60;
+    const MINUTES = 60;
     const MAXATTEMPTS = 3;
+    const SYSTEM_SECURITY_MODULE_LOCK_STATUS = 'rubenromao_security_config/rubenromao_security_system_config/is_active';
+    const SYSTEM_SECURITY_MODULE_LOCK_TIME = 'rubenromao_security_config/rubenromao_security_system_config/lock_for';
 
+    /**
+     * Check if admin user fails to login more than 3 times and lock his account
+     *
+     * @param Varien_Event_Observer $observer
+     */
     public function adminSessionUserLoginFailed($observer)
     {
 
-        /*
-         * get admin user by username
+        /**
+         * check if module is active and has time set
          */
-        $user = Mage::getSingleton('admin/user')->getCollection()
-            ->addFieldToSelect(array('user_id', 'locked_until'))
-            ->addFieldToFilter('username', array('eq' => $observer->getUserName()))
-            ->load();
+        if(Mage::getStoreConfig(self::SYSTEM_SECURITY_MODULE_LOCK_STATUS) == '1'
+            && Mage::getStoreConfig(self::SYSTEM_SECURITY_MODULE_LOCK_TIME) > 0)
+        {
 
-        $user_data = $user->getFirstItem()->getData();
-
-        /*
-         * avoid non existing users
-         */
-        if ($user->getSize()) {
-
-            /*
-             * Save failed attempt data into login attempts
+            /**
+             * get admin user by username
              */
-            $add_attempt = Mage::getSingleton('rubenromao_security/loginattempts')
-                ->addData(array(
-                    'user_id' => $user_data['user_id'],
-                    'login_attempt' => now()
-                ));
-            try {
-                $add_attempt->save();
-            }
-            catch (Exception $e) {
-                Mage::logException($e);
-            }
-
-            /*
-             * get last minute
-             */
-            $last_minute = date("Y-m-d H:i:s", (strtotime(now()) - self::ONEMINUTE));
-
-            /*
-             * get admin user attempts
-             * filtered by last 3 attempts during the last minute
-             */
-            $attempts = Mage::getModel('rubenromao_security/loginattempts')->getCollection()
-                ->addFieldToSelect(array('user_id', 'login_attempt', 'authentication_status'))
-                ->addFieldToFilter('login_attempt', array('gteq' => $last_minute))
-                ->addFieldToFilter('login_attempt', array('lteq' => now()))
-                ->setOrder('login_attempt', 'DESC')
+            $user = Mage::getSingleton('admin/user')->getCollection()
+                ->addFieldToSelect(array(
+                        'user_id', 'locked_until'
+                    ))
+                ->addFieldToFilter('username', array(
+                        'eq' => $observer->getUserName()
+                    ))
                 ->load();
 
-            /*
-             * join tables
-             */
-            $attempts->getSelect()->join(
-                array(
-                    'admin_user' => 'admin_user'
-                ),
-                'admin_user.user_id = main_table.user_id'
-            );
+            $user_data = $user->getFirstItem()->getData();
 
-            /*
-             * set limit
+            /**
+             * avoid non existing users
              */
-            $attempts->getSelect()->limit(3);
+            if ($user->getSize()) {
 
-            /*
-             * check attempts number
-             */
-            if ($attempts->getSize() === self::MAXATTEMPTS) {
-
-                /*
-                 * get system lock for value
+                /**
+                 * Save failed attempt data into login attempts
                  */
-                $lock_for = Mage::getStoreConfig('rubenromao_security_config/rubenromao_security_system_config/lock_for');
-                $lock = strtotime(date("Y-m-d H:i:s")) + $lock_for;
-                $lock_until = date("Y-m-d H:i:s", $lock);
-
-                /*
-                 * lock access
-                 */
-                $lock_access = Mage::getModel('admin/user')
-                    ->load($user_data['user_id'])
-                    ->addData(
-                        array(
-                            'is_active' => 0,
-                            'locked_until' => $lock_until
-                        )
-                    );
-
-                $lock_status = Mage::getModel('rubenromao_security/loginattempts')->getCollection()
-                    ->addFieldToFilter('user_id', array('eq' => $user_data['user_id']))
-                    ->setDataToAll('authentication_status', 0);
-
+                $add_attempt = Mage::getSingleton('rubenromao_security/loginattempts')
+                    ->addData(array(
+                        'user_id' => $user_data['user_id'],
+                        'login_attempt' => now()
+                    ));
                 try {
-                    $lock_access->setId($user_data['user_id'])->save();
-                    $lock_status->save();
-                }
-                catch (Exception $e) {
+                    $add_attempt->save();
+                } catch (Exception $e) {
                     Mage::logException($e);
+                }
+
+                /**
+                 * get last minute(s)
+                 */
+                $last_minutes = date("Y-m-d H:i:s", (strtotime(now()) - self::MINUTES));
+
+                /**
+                 * get admin user attempts
+                 * filtered by last 3 attempts during the last minute
+                 */
+                $attempts = Mage::getModel('rubenromao_security/loginattempts')->getCollection()
+                    ->addFieldToSelect(array(
+                            'user_id', 'login_attempt', 'authentication_status'
+                        ))
+                    ->addFieldToFilter('login_attempt', array(
+                            'gteq' => $last_minutes
+                        ))
+                    ->addFieldToFilter('login_attempt', array(
+                            'lteq' => now()
+                        ))
+                    ->setOrder('login_attempt', 'DESC')
+                    ->load();
+
+                /**
+                 * join tables
+                 */
+                $attempts->getSelect()->join(
+                    array(
+                        'admin_user' => 'admin_user'
+                    ),'admin_user.user_id = main_table.user_id'
+                );
+
+                /**
+                 * set limit
+                 */
+                $attempts->getSelect()->limit(3);
+
+                /**
+                 * check attempts number
+                 */
+                if ($attempts->getSize() === self::MAXATTEMPTS) {
+
+                    /**
+                     * get system lock for value
+                     */
+                    $lock_for = Mage::getStoreConfig(self::SYSTEM_SECURITY_MODULE_LOCK_TIME);
+                    $lock = strtotime(date("Y-m-d H:i:s")) + $lock_for;
+                    $lock_until = date("Y-m-d H:i:s", $lock);
+
+                    /**
+                     * lock user access
+                     */
+                    $lock_access = Mage::getModel('admin/user')
+                        ->load($user_data['user_id'])
+                        ->addData(array(
+                                'is_active' => 0,
+                                'locked_until' => $lock_until
+                            ));
+                    try {
+                        $lock_access->setId($user_data['user_id'])->save();
+                    } catch (Exception $e) {
+                        Mage::logException($e);
+                    }
+
+                    /**
+                     * set loginattempts status to 0 (locked)
+                     */
+                    $lock_status = Mage::getModel('rubenromao_security/loginattempts')->getCollection()
+                        ->addFieldToFilter('user_id', array(
+                                'eq' => $user_data['user_id']
+                            ))
+                        ->setDataToAll('authentication_status', 0);
+                    try {
+                        $lock_status->save();
+                    } catch (Exception $e) {
+                        Mage::logException($e);
+                    }
                 }
             }
         }
     }
 
+    /**
+     * Check if admin user has locked until timestamp set and unlocks it or not
+     *
+     * @param Varien_Event_Observer $observer
+     */
     public function adminUserAuthenticateBefore($observer)
     {
-        /*
-          * get admin user by username
-          */
-        $user = Mage::getSingleton('admin/user')->getCollection()
-            ->addFieldToSelect(array('user_id', 'locked_until'))
-            ->addFieldToFilter('username', array('eq' => $observer['username']))
-            ->load();
 
-        $user_data = $user->getFirstItem()->getData();
-
-        /*
-         * avoid non existing users
+        /**
+         * check if module is active
          */
-        if ($user->getSize()) {
+        if (Mage::getStoreConfig(self::SYSTEM_SECURITY_MODULE_LOCK_STATUS) == '1')
+        {
 
-            /*
-             * get collection and join tables check if user is locked
+            /**
+             * get admin user by username
              */
-            $user_status = Mage::getSingleton('admin/user')->getCollection()
-                ->addFieldToSelect(array('is_active', 'locked_until'))
-                ->addFieldToFilter('is_active', array('eq' => 1))
-                ->addFieldToFilter(
-                    array('locked_until','locked_until'),
-                    array(
-                        array('null' => true),
-                        array('lt' => now())
-                    )
-                );
+            $user = Mage::getSingleton('admin/user')->getCollection()
+                ->addFieldToSelect(array(
+                        'user_id', 'locked_until'
+                    ))
+                ->addFieldToFilter('username', array(
+                        'eq' => $observer['username']
+                    ))
+                ->load();
 
-            /*
-             * Join admin_user with admin_user_login_attempt -> FK user_id
+            $user_data = $user->getFirstItem()->getData();
+
+            /**
+             * avoid non existing users
              */
-            $user_status->getSelect()->join(
-                array(
-                    'admin_user_login_attempt' => 'admin_user_login_attempt'
-                ),
-                'admin_user_login_attempt.user_id = main_table.user_id'
-            );
+            if ($user->getSize()) {
 
-            /*
-             * if exists unlock
-             */
-            if ($user_status->getSize()) {
-
-                /*
-                 * unlock access
+                /**
+                 * get collection to check if user is locked
                  */
-                $unlock_access = Mage::getModel('admin/user')
-                    ->load($user_data['user_id'])
-                    ->addData(
-                        array(
-                            'is_active' => 1,
-                            'locked_until' => null
-                        )
-                    );
+                $user_status = Mage::getSingleton('admin/user')->getCollection()
+                    ->addFieldToSelect(array(
+                        'is_active', 'locked_until'
+                    ))
+                    ->addFieldToFilter('user_id', array(
+                        'eq' => $user_data['user_id']
+                    ))
+                    ->addFieldToFilter('is_active', array(
+                        'eq' => 0
+                    ))
+                    ->addFieldToFilter('locked_until', array(
+                        'lteq' => now()
+                    ));
 
-                $unlock_status = Mage::getModel('rubenromao_security/loginattempts')->getCollection()
-                    ->addFieldToFilter('user_id', array('eq' => $user_data['user_id']))
-                    ->setDataToAll('authentication_status', 1);
+                /**
+                 * if exists unlock
+                 */
+                if ($user_status->getSize()) {
 
-                try {
-                    $unlock_access->setId($user_data['user_id'])->save();
-                    $unlock_status->save();
+                    /**
+                     * unlock user access
+                     */
+                    $unlock_access = Mage::getModel('admin/user')
+                        ->load($user_data['user_id'])
+                        ->addData(array(
+                                'is_active' => 1,
+                                'locked_until' => null
+                            ));
+                    try {
+                        $unlock_access->setId($user_data['user_id'])->save();
+                    } catch (Exception $e) {
+                        Mage::logException($e);
+                    }
+
+                    /**
+                     * set loginattempts status to 1 (unlocked)
+                     */
+                    $unlock_status = Mage::getModel('rubenromao_security/loginattempts')->getCollection()
+                        ->addFieldToFilter('user_id', array(
+                                'eq' => $user_data['user_id']
+                            ))
+                        ->setDataToAll('authentication_status', 1);
+                    try {
+                        $unlock_status->save();
+                    } catch (Exception $e) {
+                        Mage::logException($e);
+                    }
                 }
-                catch (Exception $e) {
-                    Mage::logException($e);
-                }
-
-            } else {
-
-                //$this->adminSessionUserLoginFailed($observer);
-
             }
         }
     }
