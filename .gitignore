@@ -4,6 +4,14 @@
 # Magento Default Files    #
 #--------------------------#
 
+app/design/adminhtml/default/default/layout/klevu/
+app/design/adminhtml/default/default/template/klevu/
+app/etc/modules/Klevu_Addtocart.xml
+app/etc/modules/Klevu_Boosting.xml
+app/etc/modules/Klevu_Content.xml
+app/etc/modules/Klevu_Search.xml
+app/etc/modules/Klevu_Searchterms.xml
+
 .idea/codeStyleSettings.xml
 .idea/magetest.dev.iml
 .idea/magicento.xml
